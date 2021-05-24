@@ -578,7 +578,7 @@ def welcome(update: Update, context: CallbackContext):
         else:
             buttons = sql.get_welc_buttons(chat.id)
             if noformat:
-                welcome_m += revert_buttons(buttons)
+                welcome_m = revert_buttons(buttons)
                 ENUM_FUNC_MAP[welcome_type](
                     chat.id, cust_content, caption=welcome_m)
 
