@@ -3,6 +3,7 @@ import os
 import sys
 import time
 import spamwatch
+from redis import StrictRedis
 from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
@@ -77,6 +78,7 @@ if ENV:
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
+    REDIS_URL = os.environ.get('REDIS_URL')
     STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', True))
     WORKERS = int(os.environ.get('WORKERS', 8))
@@ -172,6 +174,24 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
+
+REDIS = StrictRedis.from_url(REDIS_URL,decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("Your redis server is now alive!")
+
+except BaseException:
+
+    raise Exception("Your redis server is not alive, please check again.")
+
+finally:
+
+   REDIS.ping()
+
+   LOGGER.info("Your redis server is now alive!")
 
 if not SPAMWATCH_API:
     sw = None
