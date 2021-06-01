@@ -39,8 +39,7 @@ youtube-search-python
 pyrogram
 tgCrypto>=1.2.2
 motor
-pymongo 
-python-arq
+pymongo
 dnspython 
 telegraph
 gtts
