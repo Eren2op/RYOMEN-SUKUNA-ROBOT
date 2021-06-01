@@ -389,8 +389,8 @@ def adminlist(update, context):
             administrators.remove(admin)
             continue
 
-        #if user.username:
-        #    name = escape_markdown("@" + user.username)
+        if user.username:
+            name = escape_markdown("@" + user.username)
         if status == "creator":
             text += "\n 👑 Creator:"
             text += "\n<code> • </code>{}\n".format(name)
@@ -417,7 +417,7 @@ def adminlist(update, context):
                     html.escape(user.first_name + " " +
                                 (user.last_name or ""))))
         #if user.username:
-        #    name = escape_markdown("@" + user.username)
+            name = escape_markdown("@" + user.username)
         if status == "administrator":
             if custom_title:
                 try:
@@ -449,7 +449,7 @@ def adminlist(update, context):
 
     try:
         msg.edit_text(text, parse_mode=ParseMode.HTML)
-    except BadRequest:  # if original message is deleted
+    except BadRequest:   if original message is deleted
         return
 
 
