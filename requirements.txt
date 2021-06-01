@@ -45,3 +45,4 @@ dnspython
 telegraph
 gtts
 redis
+cloudscraper
