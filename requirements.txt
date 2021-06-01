@@ -46,3 +46,4 @@ telegraph
 gtts
 redis
 cloudscraper
+humanize
