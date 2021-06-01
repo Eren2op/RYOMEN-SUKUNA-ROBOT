@@ -389,8 +389,8 @@ def adminlist(update, context):
             administrators.remove(admin)
             continue
 
-        #if user.username:
-        #    name = escape_markdown("@" + user.username)
+        if user.username:
+            name = escape_markdown("@" + user.username)
         if status == "creator":
             text += "\n 👑 Creator:"
             text += "\n<code> • </code>{}\n".format(name)
