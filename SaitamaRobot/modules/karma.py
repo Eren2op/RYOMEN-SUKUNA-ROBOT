@@ -1,4 +1,4 @@
-from SaitamaRobot import pbot as EREN
+from SaitamaRobot import pbot as PAIN
 from SaitamaRobot.utlis.errors import capture_err
 from SaitamaRobot.modules.mongo.karma_mongo import (update_karma, get_karma, get_karmas,
                                    int_to_alpha, alpha_to_int)
@@ -10,7 +10,7 @@ regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|go
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|Noob|gross|fuck off)$"
 
 
-@EREN.on_message(
+@PAIN.on_message(
     filters.text
     & filters.group
     & filters.incoming
@@ -43,7 +43,7 @@ async def upvote(_, message):
     )
 
 
-@EREN.on_message(
+@PAIN.on_message(
     filters.text
     & filters.group
     & filters.incoming
@@ -76,7 +76,7 @@ async def downvote(_, message):
     )
 
 
-@EREN.on_message(filters.command("karma") & filters.group)
+@PAIN.on_message(filters.command("karma") & filters.group)
 @capture_err
 async def karma(_, message):
     chat_id = message.chat.id
