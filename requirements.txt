@@ -36,7 +36,7 @@ youtube_dl
 youtube_search
 pytube
 youtube-search-python
-pyrogram
+pyrogram==1.2.9
 tgCrypto>=1.2.2
 motor
 pymongo
