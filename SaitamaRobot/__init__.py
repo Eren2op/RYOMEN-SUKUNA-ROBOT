@@ -200,7 +200,7 @@ else:
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
-pbot = Client("KurisuPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("PainPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SaitamaRobot
 dispatcher = updater.dispatcher
