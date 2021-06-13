@@ -60,3 +60,4 @@ pykeyboard
 aiofiles
 carbonnow
 search_engine_parser
+html2text
