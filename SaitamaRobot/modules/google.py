@@ -332,7 +332,7 @@ def scam(imgspage, lim):
     return imglinks
 
 
-__mod_name__ = "GoogleSearch"
+__mod_name__ = "Google"
 
 __help__ = """
  • `/google <text>` :- Perform a google search
@@ -342,7 +342,7 @@ __help__ = """
 
 
 REVERSE_HANDLER = DisableAbleCommandHandler(
-    ["reverse", "grs"], reverse, pass_args=True, admin_ok=True
+    ["grs"], reverse, pass_args=True, admin_ok=True
 )
 
 dispatcher.add_handler(REVERSE_HANDLER)
