@@ -146,3 +146,9 @@ async def progress_callback(current, total, reply):
             prevtext = text
             last_edit_time = time.time()
             progress_callback_data[message_identifier] = last_edit_time, prevtext, start_time
+__help__ = """
+/whatanime :- Please reply to a Gif or Photo or Video,
+You saw a good anime video, photo, gif but dont know what is that anime's name?
+This is where whatanime comes in, just reply to that media with /whatanime and it will search the anime name for you from anilist.
+"""
+__mod_name__ = "WhatAnime"
