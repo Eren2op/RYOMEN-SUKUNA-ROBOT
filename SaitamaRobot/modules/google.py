@@ -171,8 +171,8 @@ async def apk(e):
     except Exception as err:
         await e.reply("Exception Occured:- " + str(err))
 
-#@run_async
-#def reverse(update: Update, context:CallbackContext):
+@run_async
+def grs(update: Update, context:CallbackContext):
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
 
@@ -338,11 +338,12 @@ __help__ = """
  • `/google <text>` :- Perform a google search
  • `/img <text>` :- Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
  • `/app <appname>` :- Searches for an app in Play Store and returns its details.
+ • `/grs <reply to image>` :- Same like /reverse.
  """
 
 
 REVERSE_HANDLER = DisableAbleCommandHandler(
-    ["grs"], reverse, pass_args=True, admin_ok=True
+    ["grs"], grs, pass_args=True, admin_ok=True
 )
 
 dispatcher.add_handler(REVERSE_HANDLER)
