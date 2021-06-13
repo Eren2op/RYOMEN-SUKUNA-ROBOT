@@ -215,7 +215,7 @@ def config(client, message):
 
 
 __help__ = """
-<b>FSub:</b>
+<b>ForceSub:</b>
 - Pain can mute members who are not subscribed your channel until they subscribe
 - When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 <b>Setup</b>
@@ -228,6 +228,7 @@ Note: Only creator of the group can setup me and i will not allow force subscrib
  - /forcesubscribe {channel username} - To turn on and setup the channel.
  - /forcesubscribe clear - To unmute all members who muted by me.
 Note: /forcesub is an alias of /forcesubscribe
+WARNING: This Feature Is Being Fixed As It Has Some 
  
 """
-__mod_name__ = "Force Subscribe "
+__mod_name__ = "ForceSub"
