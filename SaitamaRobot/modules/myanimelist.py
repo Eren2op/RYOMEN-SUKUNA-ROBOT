@@ -20,7 +20,7 @@ jikan = Jikan()
 
 
 @run_async
-def anime(update: Update, context: CallbackContext):
+def myanime(update: Update, context: CallbackContext):
     msg = update.effective_message
     args = context.args
     query = " ".join(args)
@@ -94,7 +94,7 @@ def anime(update: Update, context: CallbackContext):
 
 
 @run_async
-def character(update: Update, context: CallbackContext):
+def mycharacter(update: Update, context: CallbackContext):
     msg = update.effective_message
     res = ""
     args = context.args
@@ -129,7 +129,7 @@ def character(update: Update, context: CallbackContext):
 
 
 @run_async
-def upcoming(update: Update, context: CallbackContext):
+def myupcoming(update: Update, context: CallbackContext):
     msg = update.effective_message
     rep = "<b>Upcoming anime</b>\n"
     later = jikan.season_later()
@@ -144,7 +144,7 @@ def upcoming(update: Update, context: CallbackContext):
 
 
 @run_async
-def manga(update: Update, context: CallbackContext):
+def mymanga(update: Update, context: CallbackContext):
     msg = update.effective_message
     args = context.args
     query = " ".join(args)
@@ -198,17 +198,17 @@ Get information about anime, manga or characters with the help of this module! A
 *Available commands:*
  - /myanime <anime>: returns information about the anime.
  - /mycharacter <character>: returns information about the character.
- - /mmanga <manga>: returns information about the manga.
+ - /mymanga <manga>: returns information about the manga.
  - /myupcoming: returns a list of new anime in the upcoming seasons.
  """
 
 __mod_name__ = "MyAnimeList"
 
 
-ANIME_HANDLER = CommandHandler("myanime", anime, pass_args=True)
-CHARACTER_HANDLER = CommandHandler("mycharacter", character, pass_args=True)
-UPCOMING_HANDLER = CommandHandler("myupcoming", upcoming)
-MANGA_HANDLER = CommandHandler("mymanga", manga, pass_args=True)
+ANIME_HANDLER = CommandHandler("myanime", myanime, pass_args=True)
+CHARACTER_HANDLER = CommandHandler("mycharacter", mycharacter, pass_args=True)
+UPCOMING_HANDLER = CommandHandler("myupcoming", myupcoming)
+MANGA_HANDLER = CommandHandler("mymanga", mymanga, pass_args=True)
 
 dispatcher.add_handler(ANIME_HANDLER)
 dispatcher.add_handler(CHARACTER_HANDLER)
