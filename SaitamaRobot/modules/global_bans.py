@@ -139,6 +139,7 @@ def gban(update: Update, context: CallbackContext):
         return
 
     message.reply_text("On it!")
+    bot.send_sticker(chat, GBAN_STICKER)
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
@@ -228,7 +229,6 @@ def gban(update: Update, context: CallbackContext):
     if gban_time > 60:
         gban_time = round((gban_time / 60), 2)
         message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
-       bot.send_sticker(chat.id, GBAN_STICKER)
     else:
         message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
 
