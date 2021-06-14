@@ -30,9 +30,9 @@ from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboard
 
 from SaitamaRobot import BOT_ID
 
-# from DaisyX import OWNER_ID as SUDO_USERS
+# from SaitamaRobot import OWNER_ID as SUDO_USERS
 from SaitamaRobot import pbot
-from SaitamaRobot.modules.sql import forceSubscribe_sql as sql
+from SaitamaRobot.modules.sql import fsub_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
@@ -66,7 +66,7 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Join our @{channel} channel and press 'UnMute Me' button.",
+                        text=f"❗ Join our @{channel} channel and press 'Unmute Me' button.",
                         show_alert=True,
                     )
                 except ChannelPrivate:
@@ -83,7 +83,7 @@ def _onUnMuteRequest(client, cb):
             if not client.get_chat_member(chat_id, BOT_ID).status == "administrator":
                 client.send_message(
                     chat_id,
-                    f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__",
+                    f"❗ **{cb.from_user.mention} is trying to Unmute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__",
                 )
 
             else:
@@ -115,7 +115,7 @@ def _check_member(client, message):
                 except UserNotParticipant:
                     try:
                         sent_message = message.reply_text(
-                            "Welcome {} 🙏 \n **You havent joined our Channel yet** ☹️ \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
+                            "Welcome {} 🙏 \n **You havent joined our @{} Channel yet** 😭 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
                                 message.from_user.mention, channel, channel
                             ),
                             disable_web_page_preview=True,
@@ -129,7 +129,7 @@ def _check_member(client, message):
                                     ],
                                     [
                                         InlineKeyboardButton(
-                                            "UnMute Me", callback_data="onUnMuteRequest"
+                                            "Unmute Me", callback_data="onUnMuteRequest"
                                         )
                                     ],
                                 ]
@@ -140,7 +140,7 @@ def _check_member(client, message):
                         )
                     except ChatAdminRequired:
                         sent_message.edit(
-                            "❗ **Pain is not an admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                            "❗ **Daisy is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
                         )
                     except RPCError:
                         return
@@ -148,7 +148,7 @@ def _check_member(client, message):
                 except ChatAdminRequired:
                     client.send_message(
                         chat_id,
-                        text=f"❗ **I not an admin of @{channel} channel.**\n__Make me admin in that channel and retry.\n#Ending FSub...__",
+                        text=f"❗ **I not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
                     )
                 except ChannelPrivate:
                     return
@@ -156,7 +156,7 @@ def _check_member(client, message):
             return
 
 
-@pbot.on_message(filters.command(["forcesubscribe", "forcesub"]) & ~filters.private)
+@pbot.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
 def config(client, message):
     user = client.get_chat_member(message.chat.id, message.from_user.id)
     if user.status is "creator" or user.user.id == 1141839926:
@@ -178,7 +178,7 @@ def config(client, message):
                         if chat_member.restricted_by.id == BOT_ID:
                             client.unban_chat_member(chat_id, chat_member.user.id)
                             time.sleep(1)
-                    sent_message.edit("✅ **UnMuted all members who are muted by me.**")
+                    sent_message.edit("✅ **Unmuted all members who are muted by me.**")
                 except ChatAdminRequired:
                     sent_message.edit(
                         "❗ **I am not an admin in this chat.**\n__I can't unmute members because i am not an admin in this chat make me admin with ban user permission.__"
@@ -215,7 +215,7 @@ def config(client, message):
 
 
 __help__ = """
-<b>ForceSub:</b>
+<b>FSub:</b>
 - Pain can mute members who are not subscribed your channel until they subscribe
 - When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 <b>Setup</b>
@@ -227,8 +227,7 @@ Note: Only creator of the group can setup me and i will not allow force subscrib
  - /forcesubscribe no/off/disable - To turn of ForceSubscribe.
  - /forcesubscribe {channel username} - To turn on and setup the channel.
  - /forcesubscribe clear - To unmute all members who muted by me.
-Note: /forcesub is an alias of /forcesubscribe
-WARNING: This Feature Is Being Fixed As It Has Some 
+Note: /fsub is an alias of /forcesubscribe
  
 """
-__mod_name__ = "ForceSub"
+__mod_name__ = "FSub"
