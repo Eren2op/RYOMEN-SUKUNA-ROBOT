@@ -6,7 +6,7 @@ from SaitamaRobot.modules.sql.users_sql import get_user_com_chats
 import SaitamaRobot.modules.sql.global_bans_sql as sql
 from SaitamaRobot import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
                           SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
-                          WOLVES, sw, dispatcher)
+                          WOLVES, GBAN_STICKER, sw, dispatcher)
 from SaitamaRobot.modules.helper_funcs.chat_status import (is_user_admin,
                                                            support_plus,
                                                            user_admin)
@@ -228,6 +228,7 @@ def gban(update: Update, context: CallbackContext):
     if gban_time > 60:
         gban_time = round((gban_time / 60), 2)
         message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
+       bot.send_sticker(chat.id, GBAN_STICKER)
     else:
         message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
 
