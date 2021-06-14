@@ -6,7 +6,7 @@ from SaitamaRobot.modules.sql.users_sql import get_user_com_chats
 import SaitamaRobot.modules.sql.global_bans_sql as sql
 from SaitamaRobot import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
                           SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
-                          WOLVES, GBAN_STICKER, sw, dispatcher)
+                          WOLVES, sw, dispatcher)
 from SaitamaRobot.modules.helper_funcs.chat_status import (is_user_admin,
                                                            support_plus,
                                                            user_admin)
@@ -139,7 +139,6 @@ def gban(update: Update, context: CallbackContext):
         return
 
     message.reply_text("On it!")
-    bot.send_sticker(chat, GBAN_STICKER)
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
