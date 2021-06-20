@@ -84,8 +84,7 @@ if ENV:
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER',
                                  'CAADAgADOwADPPEcAXkko5EB3YGYAg')
-    TEST_STICKER = os.environ.get('WARN_STICKER',
-                                 'CAACAgIAAx0CR5EMzQACG4Jgx22OYBPSg9uziHl38zPYhqfTCAAC0QADpyOPCQ60d6I7uPTdHwQ')
+    TEST_STICKER = os.environ.get('TEST_STICKER', '')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
     TIME_API_KEY = os.environ.get('TIME_API_KEY', None)
@@ -157,7 +156,7 @@ else:
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
-    WARN_STICKER = Config.WARN_STICKER
+    TEST_STICKER = Config.TEST_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
     TIME_API_KEY = Config.TIME_API_KEY
