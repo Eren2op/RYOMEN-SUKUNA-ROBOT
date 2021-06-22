@@ -52,7 +52,6 @@ lyricsgenius
 envparse
 cryptg
 cryptography
-python-arq
 aioredis
 odmantic
 aiohttp
@@ -64,4 +63,3 @@ html2text
 bing_image_downloader
 cv2_tools
 Python_ARQ
-OpenCV
