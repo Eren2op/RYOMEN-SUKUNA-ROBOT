@@ -64,4 +64,4 @@ html2text
 bing_image_downloader
 cv2_tools
 Python_ARQ
-OpenCV>=3.6.2
+OpenCV==3.6.2
