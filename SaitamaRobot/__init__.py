@@ -4,7 +4,6 @@ import sys
 import time
 import spamwatch
 from redis import StrictRedis
-from aiohttp import ClientSession
 from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
@@ -73,7 +72,7 @@ if ENV:
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get('API_ID', None)
-    ARQ_API = os.environ.get("ARQ_API", None)
+    ARQ_API_KEY = os.environ.get("ARQ_API", None)
     API_HASH = os.environ.get('API_HASH', None)
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
@@ -205,8 +204,7 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Pain", API_ID, API_HASH)
 pbot = Client("PainPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
-session = ClientSession()
-arq = ARQ(api_url, api_key, session)
+arq = ARQ(ARQ_API_KEY)
 db = mongo_client.SaitamaRobot
 dispatcher = updater.dispatcher
 
