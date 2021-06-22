@@ -59,7 +59,7 @@ You can find the list of available commands with /help
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a part of [Akatsuki.](https://t.me/PainRobotSupport)
+I'm a part of [Akatsuki](https://t.me/PainRobotSupport)
 Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* commands available:
@@ -200,7 +200,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="🧲Add Pain to your group!",
+                            text="➕ Add Pain To Your Group!",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                      ],
@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
                      ],
                      [
                          InlineKeyboardButton(
-                             text="💾 Source Code.",
+                             text="💾 Source Code",
                              url="https://github.com/PAINBOI2008/PainRobot")
                      ]]))
     else:
