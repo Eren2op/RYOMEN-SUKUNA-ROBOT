@@ -27,14 +27,14 @@ from traceback import format_exc
 from pyrogram import filters
 from pyrogram.types import Message
 
-from wbb import SUDOERS, USERBOT_PREFIX, app, app2, arq
-from wbb.core.decorators.errors import capture_err
+from SaitamaRobot import DRAGONS, pbot, arq
+from SaitamaRobot.utlis.errors import capture_err
 
 __MODULE__ = "Quotly"
 __HELP__ = """
-`/q`*:* To quote a message.
+ • `/q`*:* To quote a message.
  • `/q` [Msg Num]*:* To quote more than 1 messages.
- •`/q` r*:* to quote a message with it's reply.
+ • `/q` r*:* to quote a message with it's reply.
 """
 
 
@@ -62,10 +62,7 @@ def isArgInt(message: Message) -> bool:
         return [False, 0]
 
 
-@app2.on_message(
-    filters.command("q", prefixes=USERBOT_PREFIX) & filters.user(SUDOERS)
-)
-@app.on_message(filters.command("q") & ~filters.private)
+@pbot.on_message(filters.command("q") & ~filters.private)
 @capture_err
 async def quotly_func(client, message: Message):
     if not message.reply_to_message:
