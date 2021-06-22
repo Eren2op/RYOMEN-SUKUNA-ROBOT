@@ -63,4 +63,4 @@ search_engine_parser
 html2text
 bing_image_downloader
 cv2_tools
-Python_ARQ
+python_arq
