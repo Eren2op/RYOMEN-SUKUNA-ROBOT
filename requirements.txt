@@ -1,4 +1,5 @@
 alphabet_detector
+aiohttp
 beautifulsoup4
 bleach
 cachetools
