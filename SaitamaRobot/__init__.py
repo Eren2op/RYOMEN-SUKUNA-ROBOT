@@ -72,7 +72,7 @@ if ENV:
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get('API_ID', None)
-    ARQ_API_KEY = os.environ.get("ARQ_API", None)
+    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", None)
     API_HASH = os.environ.get('API_HASH', None)
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
