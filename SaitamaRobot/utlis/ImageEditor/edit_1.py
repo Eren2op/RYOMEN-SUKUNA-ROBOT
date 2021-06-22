@@ -2,7 +2,7 @@
 import os
 import shutil
 
-from cv2_tools import cv2
+from import cv2
 from PIL import Image, ImageEnhance, ImageFilter
 
 
