@@ -3,12 +3,13 @@ import os
 import sys
 import time
 import spamwatch
-from redis import StrictRedis
 from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Python_ARQ import ARQ
+from redis import StrictRedis
+
 StartTime = time.time()
 
 # enable logging
