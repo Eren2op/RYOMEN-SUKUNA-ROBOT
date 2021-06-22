@@ -9,6 +9,8 @@ from telethon import TelegramClient
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Python_ARQ import ARQ
 from redis import StrictRedis
+import aiohttp
+from aiohttp import ClientSession
 
 StartTime = time.time()
 
@@ -98,6 +100,7 @@ if ENV:
     SPAMWATCH_API = os.environ.get('SPAMWATCH_API', None)
     BOT_ID = 1412878118
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
+    ARQ_API_URL = "TheARQ.Tech"
 
     try:
         BL_CHATS = set(int(x) for x in os.environ.get('BL_CHATS', "").split())
@@ -205,7 +208,8 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Pain", API_ID, API_HASH)
 pbot = Client("PainPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
-arq = ARQ(ARQ_API, api_key, aiohttp_session)
+aiohttpsession = ClientSession()
+arq = ARQ(ARQ_API, ARQ_API_URL, aiohttpsession)
 db = mongo_client.SaitamaRobot
 dispatcher = updater.dispatcher
 
