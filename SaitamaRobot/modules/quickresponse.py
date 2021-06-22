@@ -98,3 +98,4 @@ __help__ = """
 • `/makeqr` <text> *:* make any text to a qr code format.
 • `/getqr` <reply to a qr code> *:* decode and get what is inside the qr code.
 """
+__mod_name__ = "QR"
