@@ -167,11 +167,11 @@
          "description": "Database URL From https://www.mongodb.com/",
          "required": false,
          "value": ""
-      },      
-      "GBAN_STICKER": {
-         "description": "ID of the sticker you want to use when gbanning people.",
-         "required": false,
-         "value": "CAACAgQAAx0CR5EMzQACG4Fgx218mcFWz35fybL7xrxQ3cTVFwAC3QADn-C9C9daSaW3pwsWHwQ"
+      },
+      "REM_BG_API_KEY": {
+          "description": "API key from https://www.remove.bg/api .",
+          "required": false,
+          "value": ""
       }
       
    }
