@@ -62,5 +62,6 @@ carbonnow
 search_engine_parser
 html2text
 bing_image_downloader
-cv2
+cv2_tools
 Python_ARQ
+OpenCV>=3.6.2
