@@ -4,6 +4,7 @@ import sys
 import time
 import spamwatch
 from redis import StrictRedis
+from aiohttp import ClientSession
 from pyrogram import Client, errors
 import telegram.ext as tg
 from telethon import TelegramClient
@@ -204,7 +205,8 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Pain", API_ID, API_HASH)
 pbot = Client("PainPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
-arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+session = ClientSession()
+arq = ARQ(api_url, api_key, session)
 db = mongo_client.SaitamaRobot
 dispatcher = updater.dispatcher
 
