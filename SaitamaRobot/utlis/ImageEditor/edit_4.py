@@ -3,7 +3,7 @@ import io
 import os
 import shutil
 
-import cv2
+from cv2_tools import cv2
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageOps
