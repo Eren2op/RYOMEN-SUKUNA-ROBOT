@@ -72,7 +72,7 @@ if ENV:
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get('API_ID', None)
-    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", None)
+    ARQ_API = os.environ.get("ARQ_API_BASE_URL", None)
     API_HASH = os.environ.get('API_HASH', None)
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
@@ -204,7 +204,7 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("Pain", API_ID, API_HASH)
 pbot = Client("PainPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
-arq = ARQ(ARQ_API_KEY)
+arq = ARQ(ARQ_API)
 db = mongo_client.SaitamaRobot
 dispatcher = updater.dispatcher
 
