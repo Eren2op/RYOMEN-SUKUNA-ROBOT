@@ -2,7 +2,7 @@
 import aiohttp
 from pyrogram import filters
 from SaitamaRobot import pbot
-from SaitamaRobot.utils.errors import capture_err
+from SaitamaRobot.utlis.errors import capture_err
 
 @pbot.on_message(filters.command('gitinfo'))
 @capture_err
