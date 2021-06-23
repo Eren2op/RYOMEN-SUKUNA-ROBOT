@@ -453,11 +453,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
 __mod_name__ = "Image Editor"
 __help__ = """
  *IMAGE EDITOR*
-Eren has some advanced image editing tools inbuilt
-Bright, Circle, RemBG, Blur, Border, Flip, Glitch, Sticker maker and more
+Pain has some advanced image editing tools inbuilt
+Bright, Mixed, Circle, Remove BG, Blur, Border, Invert, Glitch, Sticker Maker, Black And White, Rotate, Sapia, Contrast, Pencil And Cartoon.
 
-- /edit [reply to image]: Open the image editor
-- /rmbg [REPLY]: Revove BG of replied image/sticker.
-
- Special credits to TroJanzHEX 
+- /edit [reply to image]: Open the image editor.
 """
