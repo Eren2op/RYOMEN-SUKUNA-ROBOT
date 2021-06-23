@@ -22,7 +22,7 @@ from SaitamaRobot import *
 from SaitamaRobot import telethn as tbot
 from SaitamaRobot.events import register
 
-@register(pattern=r"^/getqr")
+@register(pattern=r"^/getqr$")
 async def parseqr(qr_e):
     """For /getqr command, get QR Code content from the replied photo."""
     if qr_e.fwd_from:
@@ -45,7 +45,7 @@ async def parseqr(qr_e):
     )
 
 
-@register(pattern=r"^/makeqr")
+@register(pattern=r"^/makeqr(?: |$)([\s\S]*)")
 async def make_qr(qrcode):
     """For /makeqr command, make a QR Code containing the given content."""
     if qrcode.fwd_from:
@@ -91,11 +91,10 @@ size=200x200&charset-source=UTF-8&charset-target=UTF-8\
     )
     os.remove(required_file_name)
     duration = (datetime.now() - start).seconds
-    await qrcode.reply("Created QRCode in {} seconds".format(duration))
+    await qrcode.reply("Generated QR Code in {} seconds".format(duration))
     await sleep(5)
 
 __help__ = """
-• `/makeqr` <text> *:* make any text to a qr code format.
-• `/getqr` <reply to a qr code> *:* decode and get what is inside the qr code.
+• `/makeqr` <text> : make any text to a qr code format. 
+• `/getqr` <reply to a qrcode> : decode and get what is inside the qr code.
 """
-__mod_name__ = "QR"
