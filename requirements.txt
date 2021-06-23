@@ -55,7 +55,7 @@ cryptography
 python-arq
 aioredis
 odmantic
-aiohttp
+aiohttp>=2.2.5
 pykeyboard
 aiofiles
 carbonnow
