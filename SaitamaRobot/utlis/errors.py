@@ -1,7 +1,7 @@
 import sys
 import traceback
 from functools import wraps
-from SaitamaRobot import pbot, OWNER_ID
+from SaitamaRobot import pbot, SUPPORT_CHAT
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
 
@@ -51,7 +51,7 @@ def capture_err(func):
             )
             for x in error_feedback:
                 await pbot.send_message(
-                    OWNER_ID,
+                    SUPPORT_CHAT,
                     x
                 )
             raise err
