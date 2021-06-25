@@ -26,9 +26,9 @@ def split_limits(text):
 
 def capture_err(func):
     @wraps(func)
-    async def capture(client, message, *args, kwargs):
+    async def capture(client, message, *args, **kwargs):
         try:
-            return await func(client, message, *args, kwargs)
+            return await func(client, message, *args, **kwargs)
         except ChatWriteForbidden:
             await pbot.leave_chat(message.chat.id)
             return
@@ -38,11 +38,7 @@ def capture_err(func):
                 etype=exc_type, value=exc_obj, tb=exc_tb,
             )
             error_feedback = split_limits(
-                '**ERROR** | {} | {}\n\n
-{}
-\n\n
-{}
-\n'.format(
+                '**ERROR** | `{}` | `{}`\n\n```{}```\n\n```{}```\n'.format(
                     0 if not message.from_user else message.from_user.id,
                     0 if not message.chat else message.chat.id,
                     message.text or message.caption,
