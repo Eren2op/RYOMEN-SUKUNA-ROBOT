@@ -1,5 +1,6 @@
 # Taken From https://github.com/developer-boy-sdowner/Sheebarobot/ After Permission Of Sheeba's Owner
 # Only For Bot Owner's Uses But You Can Modify It To Make It Useable By Others
+# I Don't Know Who The Real Owner Of This Code Is, But Thanks For This ❤
 import asyncio
 import math
 import os
@@ -14,7 +15,7 @@ heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 
 
-@register(pattern="^/(set|see|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
+@register(pattern="^/(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
 async def variable(var):
     if var.fwd_from:
         return
@@ -32,18 +33,18 @@ async def variable(var):
         return await var.reply("`[HEROKU]:" "\nPlease setup your` **HEROKU_APP_NAME**")
     exe = var.pattern_match.group(1)
     heroku_var = app.config()
-    if exe == "see":
+    if exe == "get":
         k = await var.reply("`Getting information...`")
         await asyncio.sleep(1.5)
         try:
             variable = var.pattern_match.group(2).split()[0]
             if variable in heroku_var:
                 return await k.edit(
-                    "**ConfigVars**:" f"\n\n`{variable} = {heroku_var[variable]}`\n"
+                    "**Config Vars**:" f"\n\n`{variable} = {heroku_var[variable]}`\n"
                 )
             else:
                 return await k.edit(
-                    "**ConfigVars**:" f"\n\n`Error:\n-> {variable} don't exists`"
+                    "**Config Vars**:" f"\n\n`Error:\n-> {variable} don't exists`"
                 )
         except IndexError:
             configs = prettyjson(heroku_var.to_dict(), indent=2)
@@ -71,7 +72,7 @@ async def variable(var):
         s = await var.reply("`Setting information...wait saar`")
         variable = var.pattern_match.group(2)
         if not variable:
-            return await s.edit(">`.set var <ConfigVars-name> <value>`")
+            return await s.edit(">`.set var <Config Vars-name> <value>`")
         value = var.pattern_match.group(3)
         if not value:
             variable = variable.split()[0]
@@ -193,7 +194,7 @@ async def _(dyno):
         dyno.chat_id,
         "logs.txt",
         reply_to=dyno.id,
-        caption="yone Bot Logz.",
+        caption="Take Dis Pain Logs.",
     )
 
     await asyncio.sleep(5)
