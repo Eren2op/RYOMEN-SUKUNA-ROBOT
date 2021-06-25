@@ -3,7 +3,8 @@ import math
 import requests
 import cloudscraper
 import urllib.request as urllib
-from PIL import Image
+from PIL import Image, ImageFont, ImageDraw
+import textwrap
 from html import escape
 from bs4 import BeautifulSoup as bs
 
@@ -14,6 +15,10 @@ from telegram.utils.helpers import mention_html
 
 from SaitamaRobot import dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
+from SaitamaRobot.events import register
+from SaitamaRobot import LOGGER
+from SaitamaRobot import TEMP_DOWNLOAD_DIRECTORY
+from SaitamaRobot import telethn as bot
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
@@ -453,7 +458,7 @@ def makepack_internal(
 Credit = "This Plugin Made by Kittu (@A_viyu), if you're using this code in your bot. there is no issue but don't remove this line" 
 
 
-@Eren(pattern="^/mmf ?(.*)")
+@register(pattern="^/mmf ?(.*)")
 async def handler(event):
     if event.fwd_from:
         return
