@@ -1,4 +1,5 @@
 # Taken From https://github.com/developer-boy-sdowner/SheebaQueen/ After Permission Of Sheeba's Owner
+# Only For Bot Owner's Uses But You Can Modify It To Make It Useable By Others
 import asyncio
 import math
 import os
