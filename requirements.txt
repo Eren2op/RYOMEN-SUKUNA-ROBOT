@@ -69,4 +69,4 @@ opencv-python-headless
 aiofiles
 uvloop
 python-dotenv
-
+heroku3
