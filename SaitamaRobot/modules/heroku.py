@@ -15,7 +15,7 @@ heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 
 
-@register(pattern="^/(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
+@register(pattern="^/(set|give|del) var(?: |$)(.*)(?: |$)([\s\S]*)")
 async def variable(var):
     if var.fwd_from:
         return
@@ -33,7 +33,7 @@ async def variable(var):
         return await var.reply("`[HEROKU]:" "\nPlease setup your` **HEROKU_APP_NAME**")
     exe = var.pattern_match.group(1)
     heroku_var = app.config()
-    if exe == "get":
+    if exe == "give":
         k = await var.reply("`Getting information...`")
         await asyncio.sleep(1.5)
         try:
