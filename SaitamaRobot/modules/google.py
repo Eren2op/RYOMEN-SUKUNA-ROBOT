@@ -64,8 +64,7 @@ async def _(event):
         try:
             title = gresults["titles"][i]
             link = gresults["links"][i]
-            desc = gresults["descriptions"][i]
-            msg += f"❍[{title}]({link})\n**{desc}**\n\n"
+            msg += f"❍[{title}]({link})\n\n"
         except IndexError:
             break
     await webevent.edit(
@@ -164,7 +163,7 @@ async def apk(e):
             + app_link
             + "'>View in Play Store</a>"
         )
-        app_details += "\n\n===> *Eren* <==="
+        app_details += "\n\n===> *PAIN* <==="
         await e.reply(app_details, link_preview=True, parse_mode="HTML")
     except IndexError:
         await e.reply("No result found in search. Please enter **Valid app name**")
