@@ -10,7 +10,9 @@ Can be found on telegram as [PainRobot](https://t.me/PainAkatsukiRobot).
 The Support group can be reached out to at [Akatsuki Organization](https://t.me/PainRobotSupport), where you can ask for help about [PainRobot](https://t.me/PainAkatsukiRobot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 News channel as at [PainRobot Updates](https://t.me/PainRobotUpdates) 
+## Note:
 
+Future updates on the bot code have been moved to a seperate repository that is now private. 
 ## How to setup/deploy.
 
 ### Read these notes carefully before proceeding 
