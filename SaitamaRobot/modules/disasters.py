@@ -63,11 +63,11 @@ def addasura(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This member is already an Asura Path")
+        message.reply_text("This user is a First Grade sorcerer)
         return ""
 
     if user_id in DEMONS:
-        rt += "Requested AO to promote a Human Path to Asura Path."
+        rt += "Requested SG to promote this user to First Grade."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
