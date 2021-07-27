@@ -52,14 +52,14 @@ def ban(update: Update, context: CallbackContext) -> str:
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
             message.reply_text(
-                "Trying to put me against a THE DEVA Path huh?")
+                "Trying to put me against Kami huh? Know Your Place,You Fool")
             return log_message
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against my creators.")
+            message.reply_text("I can't act against Special-Grade-User")
             return log_message
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Asura here will put villager lives at risk.")
+                "Fighting this Grade-1 User here will put your life at risk.")
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
