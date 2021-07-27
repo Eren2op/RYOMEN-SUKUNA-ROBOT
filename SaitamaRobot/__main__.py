@@ -59,7 +59,7 @@ You can find the list of available commands with /help
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a part of [Akatsuki](https://t.me/PainRobotSupport)
+I'm KIng of [Curses](https://t.me/sukunasupportgroup)
 Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* commands available:
@@ -77,10 +77,9 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/9127957b0437ed3a64332.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/830202cc3e2efc83bcedc.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
 You can donate to the original writer of the Base code, Paul
 There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
 
@@ -200,7 +199,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="➕ Add Pain To Your Group!",
+                            text="➕ Add sukuna To Your Group!",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                      ],
@@ -210,12 +209,12 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🔔Updates Channel",
-                             url="https://t.me/PainRobotUpdates")
+                             url="https://t.me/SukunaRobotUpdates")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="📖 Getting Started Guide",
-                             url="https://t.me/PainRobotUpdates/4")
+                             text="Log Channel",
+                             url="https://t.me/sukunaRobotlogs")
                      ],
                      [
                          InlineKeyboardButton(
@@ -541,7 +540,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[This World Shall Know Pain!](https://telegra.ph/file/b5e2d0c7cee078e059d66.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I got reincarnated again!](https://telegra.ph/file/be66ab5f18fa9c2657fd8.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
@@ -585,7 +584,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Pain Is Now Online!")
+        LOGGER.info("sukuna Is Now Online!")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
    
     if len(argv) not in (1, 3, 4):
