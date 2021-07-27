@@ -294,7 +294,7 @@ def removeasura(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("Requested AO to demote this user to Villager")
+        message.reply_text("Requested SG to demote this user to a normal citizen")
         DRAGONS.remove(user_id)
         data['sudos'].remove(user_id)
 
@@ -314,7 +314,7 @@ def removeasura(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not an Asura Path!")
+        message.reply_text("This user isn't a First Grade sorcerer!")
         return ""
 
 
@@ -338,7 +338,7 @@ def removehuman(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DEMONS:
-        message.reply_text("Requested AO to demote this user to Villager")
+        message.reply_text("Requested SG to demote this user to Normal Citizen")
         DEMONS.remove(user_id)
         data['supports'].remove(user_id)
 
@@ -357,7 +357,7 @@ def removehuman(update: Update, context: CallbackContext) -> str:
         return log_message
 
     else:
-        message.reply_text("This user is not a Human Path!")
+        message.reply_text("This user is not a Second Grade!")
         return ""
 
 
@@ -399,7 +399,7 @@ def removenaraka(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Naraka Path!")
+        message.reply_text("This user is not a student!")
         return ""
 
 
@@ -441,14 +441,14 @@ def removepreta(update: Update, context: CallbackContext) -> str:
 
         return log_message
     else:
-        message.reply_text("This user is not a Preta Path!")
+        message.reply_text("This user is not a Third Grade!")
         return ""
 
 
 @run_async
 @whitelist_plus
 def narakas(update: Update, context: CallbackContext):
-    reply = "<b>Known Naraka Paths:</b>\n"
+    reply = "<b>Known Students:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
         user_id = int(each_user)
@@ -464,7 +464,7 @@ def narakas(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def pretas(update: Update, context: CallbackContext):
-    reply = "<b>Known Preta Paths:</b>\n"
+    reply = "<b>Known Third Grades:</b>\n"
     bot = context.bot
     for each_user in TIGERS:
         user_id = int(each_user)
@@ -480,7 +480,7 @@ def pretas(update: Update, context: CallbackContext):
 @whitelist_plus
 def humans(update: Update, context: CallbackContext):
     bot = context.bot
-    reply = "<b>Known Human Paths:</b>\n"
+    reply = "<b>Known Second Grades:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -496,7 +496,7 @@ def humans(update: Update, context: CallbackContext):
 def asuras(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Asura Paths:</b>\n"
+    reply = "<b>Known First Grades:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -512,7 +512,7 @@ def asuras(update: Update, context: CallbackContext):
 def akatsuki(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Akatsuki Members:</b>\n"
+    reply = "<b>Special Grades:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
