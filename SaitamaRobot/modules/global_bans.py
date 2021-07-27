@@ -219,7 +219,7 @@ def gban(update: Update, context: CallbackContext):
         send_to_list(
             bot,
             DRAGONS + DEMONS,
-            f"Planetary Devastaion Completed! (User banned in <code>{gbanned_chats}</code> chats)",
+            f"This User Is Now Exterminated (User banned in <code>{gbanned_chats}</code> chats)",
             html=True)
 
     end_time = time.time()
@@ -227,9 +227,9 @@ def gban(update: Update, context: CallbackContext):
 
     if gban_time > 60:
         gban_time = round((gban_time / 60), 2)
-        message.reply_text("Planetary Devastaion Completed!", parse_mode=ParseMode.HTML)
+        message.reply_text("This User Is Now Exterminated", parse_mode=ParseMode.HTML)
     else:
-        message.reply_text("Planetary Devastaion Completed!", parse_mode=ParseMode.HTML)
+        message.reply_text("This User Is Now Exterminated", parse_mode=ParseMode.HTML)
 
     try:
         bot.send_message(
