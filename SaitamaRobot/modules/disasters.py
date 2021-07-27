@@ -72,7 +72,7 @@ def addasura(update: Update, context: CallbackContext) -> str:
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "Requested AO to promote a Naraka Path to Asura Path."
+        rt += "Requested SG to promote this user to First Grade."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -83,7 +83,7 @@ def addasura(update: Update, context: CallbackContext) -> str:
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + "\nSuccessfully set Path level of {} to Asura Path!".format(
+        rt + "\nSuccessfully set Curse of {} to First Grade!".format(
             user_member.first_name))
 
     log_message = (
@@ -122,16 +122,16 @@ def addhuman(
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "Requested AO to deomote this Asura Path to Human Path"
+        rt += "Requested sg to deomote this user to Second Grade"
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        message.reply_text("This user is already a Human Path.")
+        message.reply_text("This user is already a Second Grade sorcerer.")
         return ""
 
     if user_id in WOLVES:
-        rt += "Requested HA to promote this Naraka Path to Asura Path."
+        rt += "Requested SG to promote this user to Second Grade."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
@@ -142,7 +142,7 @@ def addhuman(
         json.dump(data, outfile, indent=4)
 
     update.effective_message.reply_text(
-        rt + f"\n{user_member.first_name} was added as a Human Path!")
+        rt + f"\n{user_member.first_name} is Now a Second Grade Sorcerer!")
 
     log_message = (
         f"#SUPPORT\n"
@@ -177,17 +177,17 @@ def addnaraka(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is an Asura Path, Demoting to Naraka Path."
+        rt += "This user is an First Grade , Demoting to Student."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is a Human Path, Demoting to Naraka Path."
+        rt += "This user is a Second Grade, Demoting To Student ."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        message.reply_text("This user is already a Naraka Path.")
+        message.reply_text("This user is already a student.")
         return ""
 
     data['whitelists'].append(user_id)
@@ -198,7 +198,7 @@ def addnaraka(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a Naraka Path!")
+        f"\nSuccessfully promoted {user_member.first_name} to Student!")
 
     log_message = (
         f"#WHITELIST\n"
@@ -233,22 +233,22 @@ def addpreta(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        rt += "This member is an Asura Path, Demoting to Preta Path."
+        rt += "This user is a First Grade, Demoting to Third Grade."
         data['sudos'].remove(user_id)
         DRAGONS.remove(user_id)
 
     if user_id in DEMONS:
-        rt += "This user is a Human Path, Demoting to Preta Path."
+        rt += "This user is a Second Grade, Demoting to Third Grade."
         data['supports'].remove(user_id)
         DEMONS.remove(user_id)
 
     if user_id in WOLVES:
-        rt += "This user is a Naraka Path, Promoting to Preta Path."
+        rt += "This user is a Student, Promoting to Third Grade."
         data['whitelists'].remove(user_id)
         WOLVES.remove(user_id)
 
     if user_id in TIGERS:
-        message.reply_text("This user is already a Preta Path.")
+        message.reply_text("This user is already a Third Grade.")
         return ""
 
     data['tigers'].append(user_id)
@@ -259,7 +259,7 @@ def addpreta(update: Update, context: CallbackContext) -> str:
 
     update.effective_message.reply_text(
         rt +
-        f"\nSuccessfully promoted {user_member.first_name} to a Preta Path!"
+        f"\nSuccessfully promoted {user_member.first_name} to Second Grade Sorcerer!"
     )
 
     log_message = (
