@@ -63,7 +63,7 @@ def addasura(update: Update, context: CallbackContext) -> str:
         data = json.load(infile)
 
     if user_id in DRAGONS:
-        message.reply_text("This user is a First Grade sorcerer)
+        message.reply_text("This user is a First Grade sorcerer")
         return ""
 
     if user_id in DEMONS:
