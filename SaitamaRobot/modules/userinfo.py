@@ -236,7 +236,7 @@ def info(update: Update, context: CallbackContext):
     if user.username:
         text += f"\nUsername: @{html.escape(user.username)}"
 
-    text += f"\nPermalink: {mention_html(user.id, 'link')}"
+    text += f"\nUserlink: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
         _stext = "\nPresence: <code>{}</code>"
@@ -271,26 +271,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Path level of this person is 'Deva'."
+        text += "\n\nThis user is my Owner Sukuna."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Akatsuki Organization'."
+        text += "\n\nBeware This user is A Special Grade."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Path level of this person is 'Asura'."
+        text += "\n\nThis user is A First Grade Sorcerer."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Path level of this person is 'Human'."
+        text += "\n\nThis user is A Second Grade Sorcerer."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Path level of this person is 'Preta'."
+        text += "\n\nThis user is A Third Grade Sorcerer."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Path level of this person is 'Naraka'."
+        text += "\n\nThis user is a student at Jujutsu Tech."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/PainRobotUpdates/6">?</a>]'.format(
+        text += ' [<a href="https://t.me/PainRobotUpdates/6"«Curses»</a>]'.format(
             bot.username)
 
     try:
