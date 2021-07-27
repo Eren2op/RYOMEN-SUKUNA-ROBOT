@@ -270,6 +270,7 @@ def ungban(update: Update, context: CallbackContext):
 
     message.reply_text(
         f"I'll give {user_chat.first_name} a second chance, globally.")
+    bot.send_sticker(chat.id, BAN_STICKER)
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
