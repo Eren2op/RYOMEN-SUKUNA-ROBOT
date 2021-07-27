@@ -59,20 +59,20 @@ def ban(update: Update, context: CallbackContext) -> str:
             return log_message
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Grade-1 User here will put your life at risk.")
+                "Fighting this Grade-1-User here will put your life at risk.")
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Akatsuki to fight a Human Path."
+                "Bring an order from Special-Grade-User to fight a Grade-2-User ."
             )
             return log_message
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Akatsuki to fight a Preta Path."
+                "Bring an order from Special-Grade-User to fight a Grade-3-User."
             )
             return log_message
         elif user_id in WOLVES:
-            message.reply_text("Naraka abilities make them ban immune!")
+            message.reply_text("Student abilities make them ban immune!")
             return log_message
         else:
             message.reply_text("This user has immunity and cannot be banned.")
