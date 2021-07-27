@@ -138,7 +138,7 @@ def gban(update: Update, context: CallbackContext):
 
         return
 
-    message.reply_text("Executing Planetary Devastaion For This Particular User!")
+    message.reply_text("Domain Expansion : Malevolent Shrine! ")
     bot.send_sticker(chat.id, BAN_STICKER)
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
