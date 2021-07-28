@@ -274,19 +274,19 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThis user is my Owner Sukuna."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nBeware This user is A Special Grade."
+        text += "\n\nBeware This user is A <b>Special Grade Sorcerer</b>."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis user is A First Grade Sorcerer."
+        text += "\n\nThis user is A <b>First Grade Sorcerer</b>."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis user is A Second Grade Sorcerer."
+        text += "\n\nThis user is A <b>Second Grade Sorcerer</b>."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThis user is A Third Grade Sorcerer."
+        text += "\n\nThis user is A <b>Third Grade Sorcerer</b>."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThis user is a student at Jujutsu Tech."
+        text += "\n\nThis user is a <b>student at Jujutsu Tech</b>."
         disaster_level_present = True
 
     if disaster_level_present:
