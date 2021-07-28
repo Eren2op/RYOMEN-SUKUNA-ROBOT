@@ -45,7 +45,7 @@ def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
 @run_async
 @dev_plus
 @gloggable
-def addasura(update: Update, context: CallbackContext) -> str:
+def addgrade1(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -101,7 +101,7 @@ def addasura(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def addhuman(
+def addgrade2(
     update: Update,
     context: CallbackContext,
 ) -> str:
@@ -159,7 +159,7 @@ def addhuman(
 @run_async
 @sudo_plus
 @gloggable
-def addnaraka(update: Update, context: CallbackContext) -> str:
+def addstudent(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -215,7 +215,7 @@ def addnaraka(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def addpreta(update: Update, context: CallbackContext) -> str:
+def addgrade3(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -277,7 +277,7 @@ def addpreta(update: Update, context: CallbackContext) -> str:
 @run_async
 @dev_plus
 @gloggable
-def removeasura(update: Update, context: CallbackContext) -> str:
+def removegrade1(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -321,7 +321,7 @@ def removeasura(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def removehuman(update: Update, context: CallbackContext) -> str:
+def removegrade2(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -364,7 +364,7 @@ def removehuman(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def removenaraka(update: Update, context: CallbackContext) -> str:
+def removestudent(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -406,7 +406,7 @@ def removenaraka(update: Update, context: CallbackContext) -> str:
 @run_async
 @sudo_plus
 @gloggable
-def removepreta(update: Update, context: CallbackContext) -> str:
+def removegrade3(update: Update, context: CallbackContext) -> str:
     message = update.effective_message
     user = update.effective_user
     chat = update.effective_chat
@@ -447,7 +447,7 @@ def removepreta(update: Update, context: CallbackContext) -> str:
 
 @run_async
 @whitelist_plus
-def narakas(update: Update, context: CallbackContext):
+def students(update: Update, context: CallbackContext):
     reply = "<b>Known Students:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
@@ -463,7 +463,7 @@ def narakas(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def pretas(update: Update, context: CallbackContext):
+def grade3s(update: Update, context: CallbackContext):
     reply = "<b>Known Third Grades:</b>\n"
     bot = context.bot
     for each_user in TIGERS:
@@ -478,7 +478,7 @@ def pretas(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def humans(update: Update, context: CallbackContext):
+def grade2s(update: Update, context: CallbackContext):
     bot = context.bot
     reply = "<b>Known Second Grades:</b>\n"
     for each_user in DEMONS:
@@ -493,7 +493,7 @@ def humans(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def asuras(update: Update, context: CallbackContext):
+def grade1s(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
     reply = "<b>Known First Grades:</b>\n"
@@ -509,7 +509,7 @@ def asuras(update: Update, context: CallbackContext):
 
 @run_async
 @whitelist_plus
-def akatsuki(update: Update, context: CallbackContext):
+def specialgrades(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
     reply = "<b>Special Grades:</b>\n"
@@ -529,11 +529,11 @@ Commands listed here only work for users with special access are mainly used for
 Group admins/group owners do not need these commands. 
 
  ╔ *List all special users:*
- ╠ `/Grade-1s`*:* Lists all Grade-1 Sorcerers
- ╠ `/Grade-2s`*:* Lists all Grade-2 Sorcerers
- ╠ `/Grade-3s`*:* Lists all Grade-3 Sorcerers
+ ╠ `/Grade1s`*:* Lists all Grade-1 Sorcerers
+ ╠ `/Grade2s`*:* Lists all Grade-2 Sorcerers
+ ╠ `/Grade3s`*:* Lists all Grade-3 Sorcerers
  ╠ `/Students`*:* Lists all Students
- ╚ `/Special-Grades`*:* Lists all Special-Grade-Sorcerer
+ ╚ `/SpecialGrades`*:* Lists all Special-Grade-Sorcerer
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
