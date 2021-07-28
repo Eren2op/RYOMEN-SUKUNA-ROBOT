@@ -7,9 +7,9 @@ A modular Telegram Python bot running on python3 with a sqlalchemy database and 
 
 Can be found on telegram as [KingSukunaBot](https://t.me/KingSukuna_Bot).
 
-The Support group can be reached out to at [Ryomen Sukuna Support](https://t.me/sukunasupportgroup), where you can ask for help about [KINGSUKUNABOT](https://t.me/KingSukuna_Bot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Ryomen Sukuna Support](https://t.me/sukunasupportgroup), where you can ask for help about [King Sukuna Bot](https://t.me/KingSukuna_Bot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
-News channel as at [RYOMEN SUKUNA UPDATES](https://t.me/SukunaRobotUpdates) 
+News channel as at [Ryomen Sukuna Updates](https://t.me/SukunaRobotUpdates) 
 ## Note:
 
 Future updates on the bot code have been moved to a seperate repository that is now private. 
