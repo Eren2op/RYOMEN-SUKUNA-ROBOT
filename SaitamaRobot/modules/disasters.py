@@ -529,11 +529,11 @@ Commands listed here only work for users with special access are mainly used for
 Group admins/group owners do not need these commands. 
 
  ╔ *List all special users:*
- ╠ `/Grade-1`*:* Lists all Grade-1 Sorcerer
- ╠ `/Grade-2`*:* Lists all Grade-2 Sorcerer
- ╠ `/Grade-3`*:* Lists all Grade-3 Sorcerer
- ╠ `/Grade-4`*:* Lists all Students
- ╚ `/Special-Grade`*:* Lists all Special-Grade-Sorcerer
+ ╠ `/Grade-1s`*:* Lists all Grade-1 Sorcerers
+ ╠ `/Grade-2s`*:* Lists all Grade-2 Sorcerers
+ ╠ `/Grade-3s`*:* Lists all Grade-3 Sorcerers
+ ╠ `/Students`*:* Lists all Students
+ ╚ `/Special-Grades`*:* Lists all Special-Grade-Sorcerer
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
@@ -597,9 +597,9 @@ SUDO_HANDLER = CommandHandler(("addsudo", "addgrade1"), addgrade1)
 SUPPORT_HANDLER = CommandHandler(("addsupport", "addgrade2"), addgrade2)
 TIGER_HANDLER = CommandHandler(("addgrade3"), addgrade3)
 WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addstudent"), addstudent)
-UNSUDO_HANDLER = CommandHandler(("removesudo", "removeasura"), removeasura)
-UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removehuman"),
-                                   removehuman)
+UNSUDO_HANDLER = CommandHandler(("removesudo", "removegrade1"), removegrade1)
+UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removegrade2"),
+                                   removegrade2)
 UNTIGER_HANDLER = CommandHandler(("removepreta"), removepreta)
 UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removenaraka"),
                                      removenaraka)
