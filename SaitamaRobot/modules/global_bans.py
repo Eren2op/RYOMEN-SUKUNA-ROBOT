@@ -69,7 +69,7 @@ def gban(update: Update, context: CallbackContext):
 
     if int(user_id) in DEV_USERS:
         message.reply_text(
-            "That user is my DEV \nI can't act against our own."
+            "That user is my Dev aka Special-Grade-Sorcerer \nI can't act against our own."
         )
         return
 
