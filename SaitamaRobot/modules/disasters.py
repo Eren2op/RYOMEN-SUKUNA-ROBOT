@@ -594,8 +594,8 @@ Visit @{SUPPORT_CHAT} for more information.
 """
 
 SUDO_HANDLER = CommandHandler(("addsudo", "addgrade1"), addgrade1)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addgrade1"), addgrade1)
-TIGER_HANDLER = CommandHandler(("addgrade2"), addgrade2)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addgrade2"), addgrade2)
+TIGER_HANDLER = CommandHandler(("addgrade3"), addgrade3)
 WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addstudent"), addstudent)
 UNSUDO_HANDLER = CommandHandler(("removesudo", "removeasura"), removeasura)
 UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removehuman"),
