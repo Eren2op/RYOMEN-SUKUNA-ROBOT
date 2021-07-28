@@ -529,11 +529,11 @@ Commands listed here only work for users with special access are mainly used for
 Group admins/group owners do not need these commands. 
 
  ╔ *List all special users:*
- ╠ `/asuras`*:* Lists all Asura Paths
- ╠ `/humans`*:* Lists all Human Paths
- ╠ `/pretas`*:* Lists all Preta Paths
- ╠ `/narakas`*:* Lists all Naraka Paths
- ╚ `/akatsuki`*:* Lists all Akatsuki Organization members
+ ╠ `/Grade-1`*:* Lists all Grade-1 Sorcerer
+ ╠ `/Grade-2`*:* Lists all Grade-2 Sorcerer
+ ╠ `/Grade-3`*:* Lists all Grade-3 Sorcerer
+ ╠ `/Grade-4`*:* Lists all Students
+ ╚ `/Special-Grade`*:* Lists all Special-Grade-Sorcerer
 
  ╔ *Ping:*
  ╠ `/ping`*:* gets ping time of bot to telegram server
@@ -593,10 +593,10 @@ Group admins/group owners do not need these commands.
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addasura"), addasura)
-SUPPORT_HANDLER = CommandHandler(("addsupport", "addhuman"), addhuman)
-TIGER_HANDLER = CommandHandler(("addpreta"), addpreta)
-WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addnaraka"), addnaraka)
+SUDO_HANDLER = CommandHandler(("addsudo", "addspecialgrade"), addspecialgrade)
+SUPPORT_HANDLER = CommandHandler(("addsupport", "addgrade1"), addgrade1)
+TIGER_HANDLER = CommandHandler(("addgrade2"), addgrade2)
+WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addstudent"), addstudent)
 UNSUDO_HANDLER = CommandHandler(("removesudo", "removeasura"), removeasura)
 UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removehuman"),
                                    removehuman)
