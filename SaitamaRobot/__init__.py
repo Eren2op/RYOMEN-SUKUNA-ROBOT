@@ -88,6 +88,8 @@ if ENV:
     WORKERS = int(os.environ.get('WORKERS', 8))
     BAN_STICKER = os.environ.get('BAN_STICKER',
                                  'CAADAgADOwADPPEcAXkko5EB3YGYAg')
+    GBAN_GIF = os.environ.get('GBAN_GIF',
+                                 'https://telegra.ph/file/1f6d45f4aa230bab3d2b0.mp4')
     TEST_STICKER = os.environ.get('TEST_STICKER', '')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
@@ -164,6 +166,7 @@ else:
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
+    GBAN_GIF = Config.GBAN_GIF
     TEST_STICKER = Config.TEST_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
