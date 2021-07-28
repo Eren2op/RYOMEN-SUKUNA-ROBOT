@@ -55,20 +55,20 @@ def ban(update: Update, context: CallbackContext) -> str:
                 "Trying to put me against Kami huh? Know Your Place,You Fool")
             return log_message
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against Special-Grade-User")
+            message.reply_text("I can't act against Special-Grade-Sorcerer")
             return log_message
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Grade-1-User here will put your life at risk.")
+                "Fighting this Grade-1-Sorcerer here will put your life at risk.")
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Special-Grade-User to fight a Grade-2-User ."
+                "Bring an order from Special-Grade-User to fight a Grade-2-Sorcerer."
             )
             return log_message
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Special-Grade-User to fight a Grade-3-User."
+                "Bring an order from Special-Grade-User to fight a Grade-3-Sorcerer."
             )
             return log_message
         elif user_id in WOLVES:
