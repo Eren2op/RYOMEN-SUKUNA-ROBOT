@@ -52,14 +52,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello, {}, my name is {}! 
-I am an Anime themed group management bot with some fun extras ;)
+Hello, {}
+I'm Sukuna The Curse King.
+I'm An Anime Themed Group Management Bot From Jujutsu Kaisen!!
 You can find the list of available commands with /help
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm KIng of [Curses](https://t.me/sukunasupportgroup)
+
+
 Have a look at the following for an idea of some of the things I can help you with.
 
 *Main* commands available:
