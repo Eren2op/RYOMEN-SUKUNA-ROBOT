@@ -1,14 +1,14 @@
 {
-      "name": "PainRobot",
+      "name": "KingSukunaBot",
       "description": "An Anime themed Telegram group management bot.",
       "keywords": [
          "telegram",
          "anime",
          "group",
          "manager",
-         "pain"
+         "King Of Curses"
       ],   
-   "repository": "https://github.com/PAINBOI2008/PainRobot",
+   "repository": "https://github.com/Eren2op/RYOMEN-SUKUNA-ROBOT",
    "addons": [
       {
          "options": {
