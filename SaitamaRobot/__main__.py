@@ -53,7 +53,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 Hello, {}
-I'm Sukuna The Curse King.
+I'm Ryomen Sukuna The Curse King.
 I'm An Anime Themed Group Management Bot From Jujutsu Kaisen!!
 You can find the list of available commands with /help
 """
