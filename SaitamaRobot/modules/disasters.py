@@ -600,16 +600,16 @@ WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addstudent"), addstudent)
 UNSUDO_HANDLER = CommandHandler(("removesudo", "removegrade1"), removegrade1)
 UNSUPPORT_HANDLER = CommandHandler(("removesupport", "removegrade2"),
                                    removegrade2)
-UNTIGER_HANDLER = CommandHandler(("removepreta"), removepreta)
-UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removenaraka"),
-                                     removenaraka)
+UNTIGER_HANDLER = CommandHandler(("removegrade3"), removegrade3)
+UNWHITELIST_HANDLER = CommandHandler(("removewhitelist", "removestudent"),
+                                     removestudent)
 
-WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "narakas"],
-                                       narakas)
-TIGERLIST_HANDLER = CommandHandler(["pretas"], pretas)
-SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "humans"], humans)
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "asuras"], asuras)
-DEVLIST_HANDLER = CommandHandler(["devlist", "akatsuki"], akatsuki)
+WHITELISTLIST_HANDLER = CommandHandler(["whitelistlist", "students"],
+                                       students)
+TIGERLIST_HANDLER = CommandHandler(["grade3s"], grade3s)
+SUPPORTLIST_HANDLER = CommandHandler(["supportlist", "grade2s"], grade2s)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "grade1s"], grade1s)
+DEVLIST_HANDLER = CommandHandler(["devlist", "specialgrades"], specialgrades)
 
 dispatcher.add_handler(SUDO_HANDLER)
 dispatcher.add_handler(SUPPORT_HANDLER)
