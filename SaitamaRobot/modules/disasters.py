@@ -593,7 +593,7 @@ Group admins/group owners do not need these commands.
 Visit @{SUPPORT_CHAT} for more information.
 """
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addspecialgrade"), addspecialgrade)
+SUDO_HANDLER = CommandHandler(("addsudo", "addgrade1"), addgrade1)
 SUPPORT_HANDLER = CommandHandler(("addsupport", "addgrade1"), addgrade1)
 TIGER_HANDLER = CommandHandler(("addgrade2"), addgrade2)
 WHITELIST_HANDLER = CommandHandler(("addwhitelist", "addstudent"), addstudent)
