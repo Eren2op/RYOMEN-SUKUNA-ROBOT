@@ -5,9 +5,9 @@
 
 A modular Telegram Python bot running on python3 with a sqlalchemy database and an entirely themed persona to make Sukuna suitable for Anime and Manga group chats. 
 
-Can be found on telegram as [KingSukunaBot](https://t.me/KingSukunaBot).
+Can be found on telegram as [KingSukunaBot](https://t.me/KingSukuna_Bot).
 
-The Support group can be reached out to at [RYOMEN SUKUNA SUPPORT](https://t.me/sukunasupportgroup), where you can ask for help about [KINGSUKUNABOT](https://t.me/KingSukuna_Bot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+The Support group can be reached out to at [Ryomen Sukuna Support](https://t.me/sukunasupportgroup), where you can ask for help about [KINGSUKUNABOT](https://t.me/KingSukuna_Bot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
 News channel as at [RYOMEN SUKUNA UPDATES](https://t.me/SukunaRobotUpdates) 
 ## Note:
