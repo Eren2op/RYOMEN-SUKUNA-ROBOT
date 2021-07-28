@@ -69,7 +69,7 @@ def gban(update: Update, context: CallbackContext):
 
     if int(user_id) in DEV_USERS:
         message.reply_text(
-            "That user is my Dev aka Special-Grade-Sorcerer \nI can't act against our own."
+            "That user is my Dev \nI i cant against them,you fool."
         )
         return
 
@@ -81,7 +81,7 @@ def gban(update: Update, context: CallbackContext):
 
     if int(user_id) in DEMONS:
         message.reply_text(
-            "OOOH someone's trying to gban a Second Grade! *grabs popcorn*")
+            "OOOH someone's trying to gban a Second Grade! Gambare Gambare")
         return
 
     if int(user_id) in TIGERS:
