@@ -52,23 +52,23 @@ def ban(update: Update, context: CallbackContext) -> str:
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
             message.reply_text(
-                "Trying to put me against a God level disaster huh?")
+                "Trying to put me against a Kami huh?Know Your Place,You Fool")
             return log_message
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our own.")
+            message.reply_text("They Are Special-Grade-Sorcerer i cant against them")
             return log_message
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Dragon here will put civilian lives at risk.")
+                "Fighting this Grade-1-Sorcerer will put your life in danger")
             return log_message
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Demon disaster."
+                "Bring an order from Special-Grade-Sorcerer to exterminate a Grade-2."
             )
             return log_message
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Tiger disaster."
+                "Bring an order from special-grade-sorcerer to exterminate a Grade-3."
             )
             return log_message
         elif user_id in WOLVES:
