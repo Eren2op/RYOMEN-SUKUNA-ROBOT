@@ -167,11 +167,11 @@ You can use [nssm](https://nssm.cc/usage) to install the bot as service on windo
 Make sure to edit the start and restart bats to your needs. 
 Note: the restart bat requires that User account control be disabled.
 
-For queries or any issues regarding the bot please open an issue ticket or visit us at [Akatsuki Organization](https://t.me/PainRobotSupport)
+For queries or any issues regarding the bot please open an issue ticket or visit us at [Sukuna Support Group](https://t.me/sukunabotsupport)
 ## How to setup on Heroku 
 For starters click on this button 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/PAINBOI2008/PainRobot.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Eren2op/RYOMEN-SUKUNA-ROBOT.git) 
 
 
 ## Credits
