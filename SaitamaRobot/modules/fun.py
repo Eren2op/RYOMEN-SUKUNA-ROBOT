@@ -17,6 +17,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async, Filters
 
 GIF_ID = 'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE'
+DARE_GIF = 'https://telegra.ph/file/c8999d81191f4e27de116.mp4'
 
 @run_async
 def me_too(update, context):
@@ -60,6 +61,13 @@ def sanitize(update: Update, context: CallbackContext):
     reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
     reply_animation(
         random.choice(fun_strings.GIFS), caption=f'*Sanitizes {name}*')
+    
+    @Eren2op
+    def extension(update: Update, context: CallbackContext):
+    message = update.effective_message
+        name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
+            reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
+                reply_animation(DARE_GIF)
 
 
 @run_async
