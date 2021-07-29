@@ -92,9 +92,9 @@ if ENV:
                                  'https://telegra.ph/file/1f6d45f4aa230bab3d2b0.mp4')
     BAN_GIF = os.environ.get('BAN_GIF',
                                  'https://telegra.ph/file/511864e555d5e2b27d381.mp4')
-    DARE_GIF = os.environ.get('DARE_GIF',
 
-                                 'https://telegra.ph/file/c8999d81191f4e27de116.mp4')
+
+
     TEST_STICKER = os.environ.get('TEST_STICKER', '')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
@@ -171,7 +171,7 @@ else:
     DEL_CMDS = Config.DEL_CMDS
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
-    DARE_GIF = Config.DARE_GIF
+   
 
     GBAN_GIF = Config.GBAN_GIF
     TEST_STICKER = Config.TEST_STICKER
