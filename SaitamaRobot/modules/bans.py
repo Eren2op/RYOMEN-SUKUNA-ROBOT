@@ -52,7 +52,7 @@ def ban(update: Update, context: CallbackContext) -> str:
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
             message.reply_text(
-                "Trying to put me against a Kami huh?Know Your Place,You Fool")
+                "Trying to put me against a Kami huh? Know Your Place,You Brat")
             return log_message
         elif user_id in DEV_USERS:
             message.reply_text("They Are Special-Grade-Sorcerer i cant against them")
