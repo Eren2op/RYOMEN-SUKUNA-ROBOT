@@ -307,6 +307,7 @@ PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug)
+EXTENSION_HANDLER = DisableAbleCommandHandler("extension", extension)
 BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
@@ -326,6 +327,7 @@ MEME_HANDLER = DisableAbleCommandHandler("meme", meme)
 
 dispatcher.add_handler(MEME_HANDLER)
 dispatcher.add_handler(WEEBIFY_HANDLER)
+dispatcher.add_handler(EXTENSION_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
 dispatcher.add_handler(SANITIZE_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)
@@ -349,7 +351,7 @@ __command_list__ = [
     "table", "pat", "sanitize", "shout", "weebify"
 ]
 __handlers__ = [
-    RUNS_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
+    RUNS_HANDLER, EXTENSION_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
     SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER,
     SANITIZE_HANDLER, SHOUT_HANDLER, WEEBIFY_HANDLER, MEETOO_HANDLER, GDMORNING_HANDLER, GDNIGHT_HANDLER 
 ]
