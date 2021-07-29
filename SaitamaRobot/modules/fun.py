@@ -62,7 +62,7 @@ def sanitize(update: Update, context: CallbackContext):
     reply_animation(
         random.choice(fun_strings.GIFS), caption=f'*Sanitizes {name}*')
     
-    @Eren2op
+    @run_async
     def extension(update: Update, context: CallbackContext):
     message = update.effective_message
         name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
