@@ -90,6 +90,8 @@ if ENV:
                
     GBAN_GIF = os.environ.get('GBAN_GIF',
                                  'https://telegra.ph/file/1f6d45f4aa230bab3d2b0.mp4')
+    BAN_GIF = os.environ.get('BAN_GIF',
+                                 'https://telegra.ph/file/511864e555d5e2b27d381.mp4')
     TEST_STICKER = os.environ.get('TEST_STICKER', '')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
@@ -170,6 +172,7 @@ else:
     TEST_STICKER = Config.TEST_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
+    BAN_GIF= Config.BAN_GIF
     TIME_API_KEY = Config.TIME_API_KEY
     AI_API_KEY = Config.AI_API_KEY
     WALL_API = Config.WALL_API
