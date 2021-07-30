@@ -89,9 +89,9 @@ if ENV:
    
                
     GBAN_GIF = os.environ.get('GBAN_GIF',
-                                 'https://telegra.ph/file/1f6d45f4aa230bab3d2b0.mp4')
+                                 'https://telegra.ph/file/d36fee143a7d8152ab430.mp4')
     BAN_GIF = os.environ.get('BAN_GIF',
-                                 'https://telegra.ph/file/511864e555d5e2b27d381.mp4')
+                                 'https://telegra.ph/file/9ca94d0bb6dab523ac0f0.mp4')
 
 
 
