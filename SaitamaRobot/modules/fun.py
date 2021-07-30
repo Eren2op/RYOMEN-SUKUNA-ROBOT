@@ -79,13 +79,14 @@ def sanitize(update: Update, context: CallbackContext):
 
         random.choice(fun_strings.GIFS), caption=f'*Sanitizes {name}*')
     
+    @run_async
     def extension(update: Update, context: CallbackContext)
 
       bot = context.bot
 
             msg = update.effective_message
 
-                  bot.send_sticker(chat.id, DARE)
+                  bot.send_animation(DARE)
 
 
 @run_async
