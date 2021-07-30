@@ -7,7 +7,7 @@ from telegram.ext import CallbackContext
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from SaitamaRobot import dispatcher
 
-GIF = "https://telegra.ph/file/7f4e379a8095b8e9ac648.mp4"
+DARE = "https://telegra.ph/file/7f4e379a8095b8e9ac648.mp4"
 
 def extension(update: Update, context: CallbackContext)
       bot = context.bot
