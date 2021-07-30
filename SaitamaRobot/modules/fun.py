@@ -8,7 +8,7 @@ import urllib.request
 
 import SaitamaRobot.modules.fun_strings as fun_strings
 import SaitamaRobot.modules.helper_funcs.fun_strings as fun
-from SaitamaRobot import (dispatcher, DARE)
+from SaitamaRobot import dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SaitamaRobot.modules.helper_funcs.extraction import extract_user
@@ -80,14 +80,10 @@ def sanitize(update: Update, context: CallbackContext):
 
         random.choice(fun_strings.GIFS), caption=f'*Sanitizes {name}*')
     
-    @run_async
-    def extension(update: Update, context: CallbackContext)
 
-      bot = context.bot
+  
 
-            msg = update.effective_message
 
-                  bot.send_video(DARE)
 
 
 @run_async
@@ -359,7 +355,7 @@ dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(BLUETEXT_HANDLER)
-dispatcher.add_handler(EXTENSION_HANDLER)
+
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
@@ -370,7 +366,7 @@ dispatcher.add_handler(GDNIGHT_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
-    "runs", "slap", "extension", "roll", "toss", "shrug", "bluetext", "rlg", "decide",
+    "runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide",
     "table", "pat", "sanitize", "shout", "weebify"
 ]
 __handlers__ = [
