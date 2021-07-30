@@ -92,6 +92,8 @@ if ENV:
                                  'https://telegra.ph/file/d36fee143a7d8152ab430.mp4')
     BAN_GIF = os.environ.get('BAN_GIF',
                                  'https://telegra.ph/file/9ca94d0bb6dab523ac0f0.mp4')
+    UNGBAN_GIF = os.environ.get('UNGBAN_GIF',
+                                 'https://telegra.ph/file/032d57f93e8d352270790.mp4')
 
 
 
@@ -178,6 +180,7 @@ else:
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
     BAN_GIF= Config.BAN_GIF
+    UNGBAN_GIF= Config.UNGBAN_GIF
   
     TIME_API_KEY = Config.TIME_API_KEY
     AI_API_KEY = Config.AI_API_KEY
