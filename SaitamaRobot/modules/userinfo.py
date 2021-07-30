@@ -290,7 +290,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/PainRobotUpdates/6">«-»</a>]'.format(
+        text += ' [<a href="https://t.me/SukunaRobotUpdates/4">«-»</a>]'.format(
             bot.username)
 
     try:
