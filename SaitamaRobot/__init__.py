@@ -83,7 +83,7 @@ if ENV:
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
     REDIS_URL = os.environ.get('REDIS_URL')
-    DARE = os.environ.get('DARE','CgACAgUAAxkBAAEJMk1hA8o9g9U3itDvqUirE95a8hlL8QACXgIAAjcsGFQDdkJISD9uaiAE')
+  
     STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', True))
     WORKERS = int(os.environ.get('WORKERS', 8))
@@ -178,7 +178,7 @@ else:
 
     GBAN_GIF = Config.GBAN_GIF
     TEST_STICKER = Config.TEST_STICKER
-    DARE = Config.DARE
+    
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
     BAN_GIF= Config.BAN_GIF
