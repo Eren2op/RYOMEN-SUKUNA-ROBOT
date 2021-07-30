@@ -8,7 +8,7 @@ import urllib.request
 
 import SaitamaRobot.modules.fun_strings as fun_strings
 import SaitamaRobot.modules.helper_funcs.fun_strings as fun
-from SaitamaRobot import dispatcher
+from SaitamaRobot import (dispatcher, DARE)
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 from SaitamaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SaitamaRobot.modules.helper_funcs.extraction import extract_user
@@ -18,7 +18,8 @@ from telegram.ext import CallbackContext, run_async, Filters
 
 GIF_ID = 'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE'
 
-DARE = 'CgACAgUAAxkBAAEJMk1hA8o9g9U3itDvqUirE95a8hlL8QACXgIAAjcsGFQDdkJISD9uaiAE'
+
+
 
 
 
@@ -86,7 +87,7 @@ def sanitize(update: Update, context: CallbackContext):
 
             msg = update.effective_message
 
-                  bot.send_animation(DARE)
+                  bot.send_video(DARE)
 
 
 @run_async
