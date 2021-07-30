@@ -331,7 +331,7 @@ DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
-EXTENSION_HANDLER = DisableAbleCommandHandler("extension", extension)
+
 MEETOO_HANDLER = DisableAbleMessageHandler(
     Filters.regex(r"(?i)(me too)"), me_too, friendly="metoo"
 )
