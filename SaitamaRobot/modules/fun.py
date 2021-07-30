@@ -86,7 +86,7 @@ def sanitize(update: Update, context: CallbackContext):
 
             msg = update.effective_message
 
-                  bot.send_sticker(chat.id, DARE)
+                  bot.send_animation(DARE)
 
 
 @run_async
