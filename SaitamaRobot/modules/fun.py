@@ -18,6 +18,7 @@ from telegram.ext import CallbackContext, run_async, Filters
 
 GIF_ID = 'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE'
 
+DARE = "https://telegra.ph/file/7f4e379a8095b8e9ac648.mp4"
 
 
 
@@ -77,6 +78,14 @@ def sanitize(update: Update, context: CallbackContext):
     reply_animation(
 
         random.choice(fun_strings.GIFS), caption=f'*Sanitizes {name}*')
+    
+    def extension(update: Update, context: CallbackContext)
+
+      bot = context.bot
+
+            msg = update.effective_message
+
+                  bot.send_sticker(chat.id, DARE)
 
 
 @run_async
@@ -324,6 +333,7 @@ DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
+EXTENSION_HANDLER = DisableAbleCommandHandler("extension", extension)
 MEETOO_HANDLER = DisableAbleMessageHandler(
     Filters.regex(r"(?i)(me too)"), me_too, friendly="metoo"
 )
@@ -347,6 +357,7 @@ dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(BLUETEXT_HANDLER)
+dispatcher.add_handler(EXTENSION_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
@@ -357,11 +368,11 @@ dispatcher.add_handler(GDNIGHT_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
-    "runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide",
+    "runs", "slap", "extension", "roll", "toss", "shrug", "bluetext", "rlg", "decide",
     "table", "pat", "sanitize", "shout", "weebify"
 ]
 __handlers__ = [
-    RUNS_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
+    RUNS_HANDLER, SLAP_HANDLER, EXTENSION_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
     SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER,
     SANITIZE_HANDLER, SHOUT_HANDLER, WEEBIFY_HANDLER, MEETOO_HANDLER, GDMORNING_HANDLER, GDNIGHT_HANDLER 
 ]
