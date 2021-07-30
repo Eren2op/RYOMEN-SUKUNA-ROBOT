@@ -13,6 +13,6 @@ def extension(update: Update, context: CallbackContext)
       bot = context.bot
             msg = update.effective_message
                   bot.send_video(DARE)
-EXTENSION_HANDLER = DisableAbleCommandHandler = ("extension", run_async=True)
+EXTENSION_HANDLER = DisableAbleCommandHandler = ("extension", extension)
 
 dispatcher.add_handler(EXTENSION_HANDLER)
