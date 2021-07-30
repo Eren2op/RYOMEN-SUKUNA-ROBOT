@@ -18,7 +18,7 @@ from telegram.ext import CallbackContext, run_async, Filters
 
 GIF_ID = 'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE'
 
-DARE = "https://telegra.ph/file/7f4e379a8095b8e9ac648.mp4"
+DARE = "CgACAgUAAxkBAAEJMk1hA8o9g9U3itDvqUirE95a8hlL8QACXgIAAjcsGFQDdkJISD9uaiAE"
 
 
 
