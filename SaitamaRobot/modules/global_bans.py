@@ -270,6 +270,7 @@ def ungban(update: Update, context: CallbackContext):
 
     message.reply_text(
         f"I'll Allow It Once {user_chat.first_name} There Won't Be A Second Time.")
+    bot.send_sticker(chat.id, UNGBAN_GIF)
   
 
     start_time = time.time()
