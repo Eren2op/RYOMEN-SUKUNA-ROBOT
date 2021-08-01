@@ -566,7 +566,7 @@ def left_member(update: Update, context: CallbackContext):
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "", reply_to_message_id=reply,
+                    "The Devil Of Paradise Left but! he will be back soon", reply_to_message_id=reply,
                 )
                 return
 
