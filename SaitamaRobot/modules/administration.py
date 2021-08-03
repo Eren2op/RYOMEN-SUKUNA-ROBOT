@@ -93,7 +93,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Stand Proud You Are Strong <b>S{user_member.user.first_name or user_id}</b>!",
+        f"Stand Proud You Are Strong <b>{user_member.user.first_name or user_id}</b>!",
         parse_mode=ParseMode.HTML,
     )
 
