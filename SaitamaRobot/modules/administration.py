@@ -176,7 +176,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully promoted with all permissions except manage voice chats and add admins permissions cuz they are defaultly disabled by the owner<b>{user_member.user.first_name or user_id}</b> with full rights!",
+        f"Successfully promoted with all permissions except manage voice chats and add admins permissions cuz they are defaultly disabled by the owner<b>{user_member.user.first_name or user_id}</b> with full rights!",
         parse_mode=ParseMode.HTML,
     )
 
@@ -244,7 +244,7 @@ def demote(update: Update, context: CallbackContext) -> str:
 
         bot.sendMessage(
             chat.id,
-            f"Sucessfully demoted <b>{user_member.user.first_name or user_id}</b>!",
+            f"Successfully demoted <b>{user_member.user.first_name or user_id}</b>!",
             parse_mode=ParseMode.HTML,
         )
 
@@ -334,7 +334,7 @@ def set_title(update: Update, context: CallbackContext):
 
     bot.sendMessage(
         chat.id,
-        f"Sucessfully set title for <code>{user_member.user.first_name or user_id}</code> "
+        f"Successfully set title for <code>{user_member.user.first_name or user_id}</code> "
         f"to <code>{html.escape(title[:16])}</code>!",
         parse_mode=ParseMode.HTML,
     )
