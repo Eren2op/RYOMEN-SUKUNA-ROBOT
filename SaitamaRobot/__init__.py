@@ -95,7 +95,7 @@ if ENV:
                                  'https://telegra.ph/file/9ca94d0bb6dab523ac0f0.mp4')
     UNGBAN_GIF = os.environ.get('UNGBAN_GIF',
                                  'https://telegra.ph/file/032d57f93e8d352270790.mp4')
-    KICKME_STICKER = os.environ.get('KICKME_STICKER','CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ')
+    KICKME_STICKER = os.environ.get('KICKME_STICKER', 'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ')
 
 
 
