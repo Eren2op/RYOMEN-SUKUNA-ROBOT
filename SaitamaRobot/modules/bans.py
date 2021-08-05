@@ -381,7 +381,7 @@ def kick(update: Update, context: CallbackContext) -> str:
             chat.id,
             f"User Kicked Woops! {mention_html(member.user.id, html.escape(member.user.first_name))}.",
             parse_mode=ParseMode.HTML)
-            bot.send_sticker(chat.id, KICK_GIF)
+           
         log = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#KICKED\n"
@@ -390,11 +390,13 @@ def kick(update: Update, context: CallbackContext) -> str:
         )
         if reason:
             log += f"\n<b>Reason:</b> {reason}"
+            bot.send_sticker(chat.id, KICK_GIF)
 
         return log
 
     else:
         message.reply_text("Well damn, I can't kick that user.")
+      
 
     return log_message
 
