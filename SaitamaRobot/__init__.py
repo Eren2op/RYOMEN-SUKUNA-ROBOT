@@ -98,9 +98,11 @@ if ENV:
     
     KICKME_STICKER = os.environ.get('KICKME_STICKER',
                                     'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ')
+    KICK_GIF = os.environ.get('KICK_GIF',
 
+                                    'https://telegra.ph/file/4f3159e2e41a1eaed3c87.mp4')
                                 
-
+ 
     
 
     TEST_STICKER = os.environ.get('TEST_STICKER', '')
@@ -187,6 +189,7 @@ else:
     ALLOW_EXCL = Config.ALLOW_EXCL
     CASH_API_KEY = Config.CASH_API_KEY
     KICKME_STICKER = Config.KICKME_STICKER
+    KICK_GIF = Config.KICK_GIF
     BAN_GIF= Config.BAN_GIF
     UNGBAN_GIF= Config.UNGBAN_GIF
   
