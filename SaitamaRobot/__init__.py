@@ -100,7 +100,7 @@ if ENV:
                                     'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ')
     
     KICK_GIF = os.environ.get('KICK_GIF',
-                                    'https://telegra.ph/file/4f3159e2e41a1eaed3c87.mp4')
+                                    'https://telegra.ph/file/0bd9a0e57a246a1b4a77b.mp4')
 
                                     
                                 
