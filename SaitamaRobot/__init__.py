@@ -104,7 +104,7 @@ if ENV:
                                     
                                 
  
-    
+
 
     TEST_STICKER = os.environ.get('TEST_STICKER', '')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
