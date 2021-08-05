@@ -5,7 +5,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from SaitamaRobot import (DEV_USERS, KICKME_STICKER, LOGGER, BAN_GIF, OWNER_ID, DRAGONS, DEMONS, TIGERS,
+from SaitamaRobot import (DEV_USERS, KICKME_STICKER, LOGGER, KICK_GIF, BAN_GIF, OWNER_ID, DRAGONS, DEMONS, TIGERS,
                           WOLVES, dispatcher)
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from SaitamaRobot.modules.helper_funcs.chat_status import (
@@ -381,6 +381,7 @@ def kick(update: Update, context: CallbackContext) -> str:
             chat.id,
             f"User Kicked Woops! {mention_html(member.user.id, html.escape(member.user.first_name))}.",
             parse_mode=ParseMode.HTML)
+            bot.send_sticker(chat.id, KICK_GIF)
         log = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#KICKED\n"
