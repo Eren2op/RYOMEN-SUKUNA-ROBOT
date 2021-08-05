@@ -14,7 +14,8 @@ from SaitamaRobot.modules.helper_funcs.chat_status import (
 from SaitamaRobot.modules.helper_funcs.extraction import extract_user_and_text
 from SaitamaRobot.modules.helper_funcs.string_handling import extract_time
 from SaitamaRobot.modules.log_channel import gloggable, loggable
-KICKME_GIF = 'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ'
+
+KICKME_STICKER = 'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ'
 
 @run_async
 @connection_status
@@ -364,7 +365,7 @@ def kick(update: Update, context: CallbackContext) -> str:
 
     if user_id == bot.id:
         message.reply_text("Yeahhh I'm not gonna do that.")
-         bot.send_sticker(chat.id, KICKME_GIF)
+         bot.send_sticker(chat.id, KICKME_STICKER)
         return log_message
 
     if is_user_ban_protected(chat, user_id):
