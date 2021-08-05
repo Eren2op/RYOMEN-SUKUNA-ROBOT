@@ -98,8 +98,9 @@ if ENV:
     
     KICKME_STICKER = os.environ.get('KICKME_STICKER',
                                     'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ')
+    
     KICK_GIF = os.environ.get('KICK_GIF',
-                              'https://telegra.ph/file/4f3159e2e41a1eaed3c87.mp4')
+                                    'https://telegra.ph/file/4f3159e2e41a1eaed3c87.mp4')
 
                                     
                                 
