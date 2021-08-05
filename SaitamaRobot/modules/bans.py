@@ -364,8 +364,9 @@ def kick(update: Update, context: CallbackContext) -> str:
             raise
 
     if user_id == bot.id:
+      bot.send_sticker(chat.id, KICKME_STICKER)
         message.reply_text("Yeahhh I'm not gonna do that.")
-         bot.send_sticker(chat.id, KICKME_STICKER)
+        
         return log_message
 
     if is_user_ban_protected(chat, user_id):
