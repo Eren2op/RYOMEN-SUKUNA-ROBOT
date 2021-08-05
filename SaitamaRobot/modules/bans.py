@@ -381,8 +381,7 @@ def kick(update: Update, context: CallbackContext) -> str:
             chat.id,
             f"User Kicked Woops! {mention_html(member.user.id, html.escape(member.user.first_name))}.",
             parse_mode=ParseMode.HTML)
-        
-            bot.send_sticker(chat.id, KICK_GIF)
+        bot.send_sticker(chat.id, KICK_GIF)
           
         log = (
             f"<b>{html.escape(chat.title)}:</b>\n"
