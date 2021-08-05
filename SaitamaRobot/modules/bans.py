@@ -5,7 +5,7 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from SaitamaRobot import (DEV_USERS, LOGGER, BAN_GIF, OWNER_ID, DRAGONS, DEMONS, TIGERS,
+from SaitamaRobot import (DEV_USERS, KICKME_STICKER, LOGGER, BAN_GIF, OWNER_ID, DRAGONS, DEMONS, TIGERS,
                           WOLVES, dispatcher)
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 from SaitamaRobot.modules.helper_funcs.chat_status import (
@@ -15,7 +15,7 @@ from SaitamaRobot.modules.helper_funcs.extraction import extract_user_and_text
 from SaitamaRobot.modules.helper_funcs.string_handling import extract_time
 from SaitamaRobot.modules.log_channel import gloggable, loggable
 
-KICKME_STICKER = 'CAACAgUAAxkBAAIqs2EMF_Cxa7cpoZ88I1rOoGcfyjb_AAJ-AwACX_wQVOdMZBOFAngRIAQ'
+
 
 @run_async
 @connection_status
