@@ -24,12 +24,7 @@ GIF_ID = 'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr
 
 
 
-@run_async
-def me_too(update, context):
-    message = update.effective_message
-    reply = random.choice(
-        ["Me too thanks", "Haha yes, me too", "Same lol", "Me irl"])
-    message.reply_text(reply)
+
 
 
 @run_async
@@ -332,9 +327,7 @@ TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 
-MEETOO_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(me too)"), me_too, friendly="metoo"
-)
+
 GDMORNING_HANDLER = DisableAbleMessageHandler(
     Filters.regex(r"(?i)(good morning)"), goodmorning, friendly="goodmorning"
 )
