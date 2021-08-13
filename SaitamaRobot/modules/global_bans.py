@@ -96,7 +96,7 @@ def gban(update: Update, context: CallbackContext):
         message.reply_text("You uhh...want me to punch myself?")
         return
       
-if user_id in [792109647]:
+     if user_id in [792109647]:
         message.reply_text("Fool! You can't Exterminate Sawada he is immortal!")
         return
     
