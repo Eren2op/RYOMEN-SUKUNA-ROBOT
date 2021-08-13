@@ -474,6 +474,8 @@ def __user_info__(user_id):
     text = "Malicious: <b>{}</b>"
     if user_id in [777000, 1087968824]:
         return ""
+      if user_id in [792109647]:
+        return ""
     if user_id == dispatcher.bot.id:
         return ""
     if int(user_id) in DRAGONS + TIGERS + WOLVES:
