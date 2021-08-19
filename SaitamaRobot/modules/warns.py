@@ -69,7 +69,7 @@ def warn(
 
     if user.id in WOLVES:
         if warner:
-            message.reply_text("Naraka Paths are warn immune.")
+            message.reply_text("Students are warn immune.")
         else:
             message.reply_text(
                 "Naraka Path triggered an auto warn filter!\nI can't warn Naraka Paths but they should avoid abusing this."
